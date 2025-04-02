@@ -1,0 +1,135 @@
+.container{
+    border: 2px dashed black;
+}
+.praroz{
+    background-color: darkblue;
+    color: white;
+    display: flex;
+    justify-content: space-evenly;
+    font-size: smaller;
+}
+.pra{
+    font-size: large;
+    color: rgb(255, 68, 0);
+}
+.loginbox{ 
+    padding-top: 60px;
+    float: right;
+    margin-right: 50px;
+}
+.box{
+    border: 1px blue dotted;
+    height: 400px;
+    width: 250px;
+    background-color: black;
+    padding: 15px;
+}
+.loginhere{
+    color: rgba(127, 34, 1, 0.907);
+    font-weight: 800;
+    font-size: 30px;
+    text-align: center;
+    border: 1px solid black;
+    border-radius: 20px;
+    background-color: white;
+    padding-top: 2px;
+    padding-bottom: 10px;
+}
+input[type=text]{
+    border: none;
+    border-bottom: 2px solid orange;
+    width: 230px;
+    background-color: rgb(12, 12, 12);
+    color: white;
+    padding: 15px 10px;
+    margin: 2px 2px;
+}
+input[type=password]{
+    border: none;
+    border-bottom: 2px solid orange;
+    width: 230px;
+    background-color: rgb(18, 18, 19);
+    color: white;
+    padding: 15px 10px;
+    margin: 2px 2px;
+}
+.password{
+    padding-bottom: 40px;
+}
+.login{
+    text-align: center;
+    padding: 5px;
+    border: 1px solid orangered;
+    border-radius: 10px;
+    background-color: orangered;
+}
+.login a{
+    color: black;
+    text-decoration: none;
+}
+.login a:visited{
+    color: green;
+}
+.login a:hover{
+    color: blue;
+}
+.noaccount{
+    padding-top: 30px;
+    color: white;
+    font-size: small;
+    text-align: center;
+}
+.signup{
+    padding: 8px;
+    padding-top: 30px;
+    color: white;
+    text-align: center;
+    font-size: small;
+}
+.signup a{
+    color: orangered;
+    text-decoration: none;
+}
+.signup a:visited{
+    color: green;
+}
+.signup a:hover{
+    color: blue;
+}
+.last{
+    padding: 10px;
+    text-align: center;
+    font-size: small;
+    color: white;
+}
+.rightbox{
+    padding-top: 70px; 
+    margin-left: 35px;  
+    background-color: darkcyan; 
+}
+.firstline{
+    font-size: 40px;
+    color: white;
+}
+.developement{
+    padding-top: 3px;
+    font-size: 40px;
+    font-weight: 700;
+    color: darkorange;
+}
+.course{
+    padding-top: 3px;
+    font-size: 40px;
+    color: white;
+}
+p{
+    color: white;
+    font-size: smaller;
+}
+.joinus{
+    border: 2px solid orange;
+    border-radius: 5px;
+    background-color: darkorange;
+}
+
+

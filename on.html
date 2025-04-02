@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/on.css">
+</head>
+<body>
+    <div class="square">
+        <span class="circle"></span>
+    </div>
+    <script>
+      var age = prompt("ENTER NUMBER:");
+      var isAdult = (age > 18) ? "Too Old": "Too Young";
+      document.write(isAdult);
+
+        var result = prompt("ENTER STUDENT RESULT:");
+        var ifPassed = (result>50) ? "PASSED, an A. CONGRATS.": "FAILURE";
+        document.write(ifPassed);
+
+        let choice = prompt("input number: ")
+        let choice1 = (choice%2==0) ? "Even number": "Odd number";
+        document.write(choice1);
+    
+        let x = 10;
+        let y = 20;
+        if(x>y){
+            document.write("END");
+        }
+        else{
+            document.write('fuck');
+        }
+        var age = prompt("How old are you?");
+        if(age>12){
+            document.write("Teenager");
+        }
+        else if(age>=18){
+            document.write("Adult");
+        }
+        else{
+            document.write("Not qualified");
+        }
+        var color = "YELLOW";
+switch(color){
+    case "RED":
+        document.write("RED");
+        break;
+    case "YELLOW":
+        document.write("YELLOW");
+        break;
+    case "BLUE":
+        document.write("BLUE");
+        break;
+    default:
+        document.write("BLACK");
+}
+let w =1;
+    while (w<=10){
+        document.write(w + "<br>");
+        w++;
+    }
+    </script>
+    
+</body>
+</html>

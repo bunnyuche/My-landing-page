@@ -1,0 +1,7 @@
+nav{
+    display: inline;
+    background-color: darkseagreen;
+}
+nav a{
+    text-decoration: none;
+}

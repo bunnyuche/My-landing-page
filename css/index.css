@@ -1,0 +1,58 @@
+.motivation{
+    text-align: center;
+}
+nav{
+    background-color: dimgrey;
+}
+.form1{
+    padding-top: 50px;
+    margin-left: 5px;
+    animation-delay: 10ms;
+   
+
+}
+.name{
+    border: 20px solid burlywood;
+    font-size: large;
+    display: flex;
+}
+.nut{
+    border: 20px solid gold;
+    align-content: center;
+}
+.them{
+    padding: 20px;
+    margin: 20px;
+    background-color: brown;
+    border: 2px dotted black;
+    position: fixed;
+    bottom: 10px;
+    left: 50px;
+}
+.akidi{
+    padding: 5px;
+    border: 3px solid blueviolet;
+
+}
+.gear{
+    padding: 10px;
+    margin: 20px;
+    background-color: aquamarine;
+    position: sticky;
+    top: 0px;
+}
+.mymove{
+   float: right;
+}
+marquee{
+    font-size: 5em;
+    font-weight: 800;
+    font-variant: inherit;
+}
+th{
+    align-content: center;
+    border-collapse: collapse;
+    margin-left: 20px;
+}
+
+

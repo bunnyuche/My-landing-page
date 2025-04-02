@@ -1,0 +1,778 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="https://icons8.com/icon/39698/king-of-spades" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Pangolin&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Pangolin&family=Roboto:wght@300;700&family=Young+Serif&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <style>
+        /* :root{
+            --bg-color: #4e3322;
+            --text-color: #fff;
+            --main-color: rgb(221, 116, 46);
+            --second-bgcolor: #423325;
+            --box-shadow: 0px 0px 55px rgb(224, 168, 64);
+        } */
+
+        :root{
+            --bg-color: #1f242d;
+            --second-bgcolor: #323946;
+            --text-color: #fff;
+            --main-color: #0ef;
+        }
+
+        *{
+            box-sizing: border-box;
+            /* font-family: 'Pangolin', cursive; */
+            font-family: 'Roboto', sans-serif;
+            /* font-family: 'Young Serif', serif; */
+            font-weight: 500;
+            margin: 0;
+            padding: 0;
+            outline: none;
+            scroll-behavior: smooth;
+            text-decoration: none;
+            color: var(--text-color);
+        }
+
+        html{
+            font-size: 70.5%;
+            overflow-x: hidden;
+        }
+
+        body{
+            background: var(--bg-color);
+            color: var(--text-color);
+        }
+
+
+        @keyframes me{
+            0%, 100%{
+                /* box-shadow: 0px 0px 25px var(--box-shadow), 0px 0px 25px rgb(185, 96, 55); */
+                box-shadow: 0px 0px 55px rgb(100, 159, 163);
+                /* box-shadow: 0px 0px 35px rgb(75, 48, 27), 0px 0px 55px rgb(216, 173, 93); */
+            } 
+            50%, 75%{
+                box-shadow: 
+                    0px 0px 35px rgb(17, 71, 75),
+                    0px 0px 35px rgb(100, 159, 163);
+                /* box-shadow: 0px 0px 35px rgb(75, 48, 27), 0px 0px 55px rgb(216, 173, 93); */
+            }
+        }
+
+
+        .container{
+            width: 100%;
+            background-color: var(--bg-color);
+            min-height: 100vh;
+        }
+
+                        /* NAV-BAR STYLING */
+        header{
+            display: flex;
+            background-color: var(--bg-color);
+            font-size: 1.1rem;
+            width: 100%;
+            height: 10%;
+            justify-content: space-around;
+            padding: 2rem 5%;
+            text-decoration: none;
+            text-align: center;
+            position: fixed;
+            z-index: 99;
+        }
+
+        .sticky{
+            border-bottom: 1px solid rgba(0,0,0,0.2);
+
+        }
+
+        .logo{
+            font-size: 3rem;
+            font-weight: 700;
+            padding-top: 1rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        .nav-links{
+            display: flex;
+            flex: 1;
+            text-align: center;
+            justify-content: flex-end;
+        }
+
+        .nav-links a{
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.75rem;
+            margin-left: 3rem
+        }
+
+        .nav-links a:hover{
+            color: var(--main-color);
+        }
+
+        .active{
+            color: var(--main-color);
+        }
+
+
+                        /* MAIN CONTENT STYLE */
+        .main{
+            padding: 5rem 5%;
+            width: 100%;
+            display: flex;
+            gap: 20rem;
+            flex: 1;
+            justify-content: center;
+            align-items: center;
+        }
+        .side-content{
+            padding: 10rem 0;
+            width: 70%;
+        }
+
+        span{
+            color: var(--main-color);
+            text-shadow: 1px 1px 3px grey;
+        }
+
+        .social-container{
+            margin: 0;
+        }
+
+        .social{
+            display: inline-block;
+            text-decoration: none;
+            background: transparent;
+            margin: 0;
+            width: 3.8rem;
+            height: 3.8rem;
+            color: var(--main-color);
+            text-align: center;
+            font-weight: 900;
+            font-size: 2rem;
+            border: 2px solid;
+            border-color: var(--main-color);
+            box-shadow: 0 0 1px var(--main-color) ;
+            border-radius: 50%;
+            margin-right: 0.2rem;
+            margin-bottom: 2rem ;
+            padding: 0.48rem 0 0 0;
+        }
+
+        .side-content i{
+            color: var(--main-color);
+        }
+
+        .side-content h4{
+            font-size: 1.7rem;
+            padding-right: 5rem;
+            padding-bottom: 1.2rem;
+        }
+
+        .side-content h1{
+            font-size: 2.3rem;
+            margin-bottom: 1.2rem;
+        }
+
+        .btn{
+            padding: 1rem;
+            position: relative;
+            /* margin-top: 105px; */
+            font-weight: 700;
+            font-size: 1.5rem;
+            text-align: center;
+            border-radius: 30px;
+            border: none;
+            background-color: var(--main-color);
+            color: var(--bg-color);
+            box-shadow: 0 0 5px var(--main-color);
+            cursor: pointer;
+            transition: all ease;
+            transition-duration: 1s;
+        }
+
+        .btn:hover{
+            box-shadow: none;
+        }
+
+        .passport-container{
+            padding-bottom: 5rem;
+            padding-right: 7rem;
+        }
+
+        .passport{
+            text-align: center;
+            width: 30rem;
+            height: 30rem;
+            background: linear-gradient(rgba(0,0,0,0.8), rgb(70, 67, 67, 0)), url("../IMAGES/kratos.jpg");
+            background-size: 75rem;
+            background-repeat: no-repeat;
+            background-position: 50% 0;
+            border-radius: 50%;
+            border: none;
+            box-shadow: var(--box-shadow);
+            z-index: 1;
+            animation-name: me;
+            animation-duration: 3.1s;
+            animation-timing-function: ease;
+            animation-fill-mode: both;
+            animation-iteration-count: infinite;
+            transition: all;
+            transition-delay: 0.02s;
+            transition-duration: 0.8s;
+            transition-timing-function: ease-in;
+        }
+
+        .passport:hover{
+            background-size: 300%;
+            background-position: 47% 0;
+        }
+
+                        /* ABOUT PAGE */
+        .container2{
+            background-color: var(--second-bgcolor);
+            display: flex;
+            padding: 11rem 4rem 0;
+            gap: 2rem;
+            justify-content: center;
+        }
+
+        .container2 div{
+            margin: 1rem;
+        }
+
+        .side-content h1{
+            margin: 0.3rem 0;
+            font-size: 3.2rem;
+        }
+
+        .side-content h3{
+            font-size: 3rem;
+            margin: 0.4rem 0;
+        }
+
+        .side-content p{
+            font-size: 1.5rem;
+            margin-bottom: 30px;
+        }
+
+
+                        /* SERVICES PAGE */
+        .container3{
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+            /* justify-content: center; */
+            align-items: center;
+            padding: 9rem 9%;
+        }
+
+        .container3 h1{
+            font-size: 3.2rem;
+            text-align: center;
+            font-weight: 700;
+        }
+        .container3 i{
+            color: var(--main-color);
+        }
+
+        .banner-container{
+            /* display: grid;
+            grid-template-columns: repeat(3, 1fr); */
+            display: flex;
+            gap: 5%;
+            flex: 1;
+            margin-top: 3rem;
+            padding: 2rem;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .banner{
+            border: 1px solid rgb(126, 179, 167);
+            position: relative;
+            height: 30rem;
+            width: 30rem;
+            padding: 1rem 0 3rem 0;
+            text-align: center;
+            transition: all;
+            transition-duration: 0.2s;
+            box-shadow: 0px 0px 2px var(--main-color);
+            border-radius: 15px;
+            z-index: 1;
+            border: none;
+        }
+
+        .banner:hover{
+            border: 2px solid var(--main-color);
+            transform: scale(1.02);
+            /* box-shadow: 0px 0px 35px rgb(126, 179, 167) ; */
+        }
+
+        .banner h3{
+            font-size: 2.3rem;
+            font-weight: 700;
+        }
+
+        .banner p{
+            font-size: 1.4rem;
+            padding: 1.2rem;
+            text-align: center;
+            margin-bottom: 1.3rem;
+        }
+
+        .banner i{
+            font-size: 8rem;
+        }
+
+                        /* PORTFOLIO page styling */
+        .container4{
+            padding: 10rem 7% 0 7%;
+            background-color: var(--second-bgcolor);
+        }
+
+        .container4 h3{
+            font-size: 2.7rem;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .portfolio-container{
+            margin: 0 auto;
+            width: 80%;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+            justify-items: center;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .portfolio-box{
+            width: 21rem;
+            height: 19rem;
+            border-radius: 2.5rem;
+            position: relative;
+            display: flex;
+            overflow: hidden;
+            box-shadow: 0 0 1rem var(--second-bgcolor);
+        }
+
+        .portfolio-img{
+            width: 100%;
+            height: 100%;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            cursor: pointer;
+            transition: all;
+            transition-duration: 1s;
+            transition-timing-function: ease;
+        }
+
+        .img1{
+            background-image: linear-gradient(rgba(17, 17, 17, 0.3), rgba(0,0,0,0.5)), url("../IMAGES/astronaut.jpg") ;
+        }
+        .img2{
+            background-image: linear-gradient(rgba(17, 17, 17, 0.3), rgba(0,0,0,0.5)), url("../IMAGES/city.jpg") ;
+            
+        }
+        .img3{
+            background-image: linear-gradient(rgba(17, 17, 17, 0.3), rgba(0,0,0,0.5)), url("../IMAGES/laptop.jpg") ;
+            
+        }
+        .img4{
+            background-image: linear-gradient(rgba(17, 17, 17, 0.3), rgba(0,0,0,0.5)), url("../IMAGES/space-station.jpg") ;
+            
+        }
+        .img5{
+            background-image: linear-gradient(rgba(17, 17, 17, 0.3), rgba(0,0,0,0.5)), url("../IMAGES/interior.jpg") ;
+            
+        }
+        .img6{
+            background-image: linear-gradient(rgba(17, 17, 17, 0.3), rgba(0,0,0,0.5)), url("../IMAGES/interior2.jpg");
+
+        }
+
+        .portfolio-box:hover .portfolio-img{
+            transform: scale(1.4);
+        }
+
+
+        .portfolio-layer{
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            display: flex;
+            background: linear-gradient(rgba(17, 17, 17, 0.5), var(--main-color));
+            flex-direction: column;
+            opacity: 0.7;
+            justify-content: center;
+            padding: 2rem 0.2rem;
+            text-align: center;
+            align-items: center;
+            transition: all;
+            cursor: pointer;
+            transform: translateY(100%);
+            transition: all;
+            transition-duration: 0.7s;
+            transition-timing-function: ease-in-out;
+        }
+
+        .portfolio-box:hover .portfolio-layer{
+            transform: translateY(0);
+        }
+
+        .portfolio-layer h4{
+            font-size: 1.8rem;
+            color: var(--text-color);
+            font-weight: 700;
+        }
+
+        .portfolio-layer p{
+            color: var(--text-color);
+            font-size: 1.2rem;
+        }
+        .portfolio-layer a{
+            display: inline-block;
+            padding: 1rem;
+            width: 3rem;
+            height: 3rem;
+            border-radius: 50%;
+            background-color: var(--text-color);
+            font-size: 1rem;
+            margin-top: 1rem;
+        }
+
+        .portfolio-layer a i{
+            text-align: center;
+            color: #1e2129;
+        }
+
+
+                /* CONTACT SECTION */
+
+        .container5{
+            padding: 9rem 0 0 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            /* height: min-content; */
+        }
+
+        .container5 h3{
+            text-align: center;
+            font-size: 3rem;
+        }
+
+        form{
+            display: flex;
+            flex-direction: column;
+            padding: 1.5rem 3rem;
+            width: 60%;
+            margin: 0 auto;
+            justify-content: center;
+        }
+
+        form input:focus, textarea:focus{
+            box-shadow: inset 0 0 3px var(--main-color);
+        }
+
+        textarea{
+            width: 100%;
+            border-radius: 1rem;
+            border: none;
+            min-height: 15rem;
+            outline: none;
+            margin-bottom: 1.2rem;
+            padding: 1.5rem;
+            background-color: var(--second-bgcolor);
+            resize: none;
+        }
+
+        .input-box{
+            width: 100%;
+            display: flex;
+            gap: 1rem;
+            flex: 1s;
+        }
+
+        .input-box > *{
+            background-color: var(--second-bgcolor);
+            color: var(--text-color);
+            border-radius: 1rem;
+            border: none;
+            outline: none;
+            width: 50%;
+            padding: 1.5rem;
+            margin-bottom: 1.2rem;
+        }
+
+        .submit{
+            width: 20%;
+            align-self: center;
+        }
+
+                /* FOOTER SECTION */
+        footer{
+            height: 100%;
+            width: 100%;
+            padding: 1rem;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            background-color: var(--second-bgcolor);
+            padding: 1rem 2.5rem;
+        }
+
+        footer .footer-text{
+            font-size: 1.2rem;
+            background-color: var(--second-bgcolor);
+        }
+
+        footer .top-icon a{
+            display: inline-block;
+            padding: 0.71rem;
+            background-color: var(--main-color);
+            border-radius: 5px;
+            border: none;
+            outline: none;
+        }
+
+        .top-icon a:hover{
+            box-shadow: 0 0 3px var(--main-color);
+        }
+
+        .top-icon a i{
+            font-weight: 700;
+        }
+    </style>
+    <title>Document</title>
+</head>
+<body>
+
+    <!-- HOME PAGE -->
+    <section class="container container1" id="home">
+        <header>
+            <h2 class="logo">KAYCEE</h2>
+            <!-- <i class="fa-solid fa-bars"></i> -->
+            <nav class="nav-links">
+                <a href="#home" class="active">Home</a>
+                <a href="#about">About</a>
+                <a href="#services">Services</a>
+                <a href="#portfolio">Portfolio</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </header>
+        <div class="main">
+            <div class="side-content">
+                <h1>
+                    Hello it's me <span>KC</span><br>
+                    and <br>
+                    I'm a <span>SOFTWARE ENGINEER</span>
+                </h1>
+                <h4> Experienced programmer skilled in multiple languages and frameworks, delivering high-quality code and crafting elegant solutions. Strong collaborator with a focus on clean code practices, problem-solving, and continuous learning.
+                    Valuable asset for any team seeking a dedicated and versatile programmer.
+                </h4>
+                <div class="social-container">
+                    <a href="https://instagram.com/the._kaycee?igshid=MmIzYWVlNDQ5Yg==" class="social" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                    <a href="" class="social" target="_blank"><i class="fa fa-twitter"></i></a>
+                    <a href="https://www.linkedin.com/in/kenechukwu-adigwe-8066801a3" class="social" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                    <a href="" class="social"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                </div>
+                <a href="" class="btn">Download CV</a>
+            </div>
+            <div class="passport-container">
+                <div class="passport passport1">
+                    <!-- circle -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT PAGE -->
+    <section class="container container2" id="about">
+        <div class="passport-container">
+            <div class="passport passport2">
+                <!-- circle -->
+            </div>
+        </div>
+        <div class="side-content">
+            <h1>About <span>ME</span></h1>
+            <h3>Software engineer</h3>
+            <p>
+                Passionate software engineer with expertise in full-stack development. 
+                Dedicated to delivering high-quality code, solving complex problems,
+                and staying up-to-date with the latest technologies. Committed to creating innovative and impactful solutions.
+            </p>
+            <a href="" class="btn">Read More</a>
+        </div>
+    </section>
+
+    <!-- SERVICES PAGE -->
+    <section class="container container3" id="services">
+        <h1>MY <span>SERVICES</span></h1>
+        <div class="banner-container">
+            <div class="banner banner1">
+                <i class='bx bx-code-alt'></i>
+                <h3>Web development</h3>
+                <p>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Omnis, molestiae. Voluptatem mollitia magni perferendis cum ipsa similique ab impedit ipsam!
+                </p>
+                <a href="" class="btn">Read more</a>
+            </div>
+            <div class="banner banner2">
+                <i class='bx bx-globe'></i>
+                <h3>World Solutions</h3>
+                <p>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Omnis, molestiae. Voluptatem mollitia magni perferendis cum ipsa similique ab impedit ipsam!
+                </p>
+                <a href="" class="btn">Read more</a>
+            </div>
+            <div class="banner banner3">
+                <i class='bx bxs-music'></i>
+                <h3>Music services</h3>
+                <p>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Omnis, molestiae. Voluptatem mollitia magni perferendis cum ipsa similique ab impedit ipsam!
+                </p>
+                <a href="" class="btn">Read more</a>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- PORTFOLIO PAGE -->
+    <section class="container container4" id="portfolio">
+        <h3>LATEST <span>PROJECTS</span></h3>
+        
+        <div class="portfolio-container">
+            <div class="portfolio-box">
+                <div class="portfolio-img img1"></div>
+                <div class="portfolio-layer">
+                    <h4>SPACE-X AI</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
+                </div>
+            </div>
+            <div class="portfolio-box">
+                <div class="portfolio-img img2"></div>
+                <div class="portfolio-layer">
+                    <h4>SUPERCITY</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
+                </div>
+            </div>
+            <div class="portfolio-box">
+                <div class="portfolio-img img3"></div>
+                <div class="portfolio-layer">
+                    <h4>EMBEDDED SYSTEMS</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
+                </div>
+            </div>
+            <div class="portfolio-box">
+                <div class="portfolio-img img4"></div>
+                <div class="portfolio-layer">
+                    <h4>APOLLO 19 PROGRAM</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
+                </div>
+            </div>
+            <div class="portfolio-box">
+                <div class="portfolio-img img5"></div>
+                <div class="portfolio-layer">
+                    <h4>SMART HOMES</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
+                </div>
+            </div>
+            <div class="portfolio-box">
+                <div class="portfolio-img img6"></div>
+                <div class="portfolio-layer">
+                    <h4>IOT SUPPORT</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- CONTACT PAGE -->
+    <section class="container container5" id="contact">
+        <h3>
+            CONTACT <span>ME</span>
+        </h3>
+        <form action="" method="post">
+            <div class="input-box">
+                <input type="text" placeholder="Name">
+                <input type="email" placeholder="Email">
+            </div>
+            <div class="input-box">
+                <input type="number" placeholder="Phone No">
+                <input type="text" placeholder="Email Subject">
+            </div>
+            <textarea placeholder="Your message" name ="" id="" cols="30" rows="10"></textarea>
+            <button type="submit" class="btn submit">Submit</button>
+        </form>
+            <!-- FOOTER SECTION -->
+        <footer>
+            <div class="footer-text">
+                Copyright &copy; 2023 by Kc | All rights reserved!
+            </div>
+
+            <div class="top-icon">
+                <a href="#home"><i class="fa-solid fa-arrow-up"></i></a>
+            </div>
+        </footer>
+    </section>
+    
+
+    <script>
+        const links = document.querySelectorAll(".nav-links a")
+        const pageSections = document.querySelectorAll(".container")
+
+
+        window.onscroll = () =>{
+            pageSections.forEach((section)=>{
+                let top = window.scrollY
+                let offset = section.offsetTop - 150
+                let height = section.offsetHeight - 150
+                let id = section.getAttribute("id")
+                const navlink = document.querySelector('header nav a[href*=' + id + ']')
+
+                if (top >= offset && top < offset + height){
+                    links.forEach(linkname=>{
+                    linkname.classList.remove('active')
+                    navlink.classList.add('active') 
+                    })
+            
+                }
+            })
+
+            // sticky navbar/header
+            const header = document.querySelector('header')
+            header.classList.toggle("sticky", window.scrollY > 100)
+
+        }
+    </script>
+    <script src="https://kit.fontawesome.com/e0c79289dc.js" crossorigin="anonymous"></script>
+    <!-- <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script> -->
+</body>
+</html>
